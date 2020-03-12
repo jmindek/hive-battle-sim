@@ -1,33 +1,24 @@
 defmodule Roster do
   @moduledoc """
   Roster retlated functions.
+
+  Rosters contain a list of gangers, the affiliated House and it's attributes, and it's territory.
   """
 
   def create(gang_size \\ nil) do
-    size = gang_size || size()
+    size = gang_size || randomize_size()
+    house = House.get_house()
     %{
-      house: get_house(),
       gangers: get_gangers(size, []),
+      house: house,
+      territory: Territory.get_territory(house)
     }
   end
 
-  def size do
-    Enum.random 5..10
+  def randomize_size do
+    Enum.random 5..15
   end
   
-  def get_house do
-    Enum.random [
-      'Goliath',
-      'Cawdor',
-      'Genestealer Cult',
-      'Orlock',
-      'Corpse Grinder',
-      'Palanite',
-      'Escher',
-      'Van Saar'
-    ]
-    end
-
   def get_gangers(0, acc) do
     acc
   end

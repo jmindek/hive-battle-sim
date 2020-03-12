@@ -1,6 +1,5 @@
 defmodule GangerTest do
   use ExUnit.Case
-  doctest Ganger
 
   test "Contains name, exp, and status." do
     %{name: name, exp: exp, status: status} = Ganger.create()
