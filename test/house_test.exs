@@ -9,6 +9,6 @@ defmodule HouseTest do
       ["Chaos Fane", "Precinct Fortress", "Settlement"],
       fn base -> base == home_base end
     )
-    assert comp_req == nil
+    assert comp_req.is_map()
   end
 end
