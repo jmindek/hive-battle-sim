@@ -1,0 +1,12 @@
+
+** DONE Add Ganger getter
+*** Return Ganger(name: somename, exp: 1, status: <:captured, :active:, :ooa>)
+*** Create status lex
+*** Create name lex
+** Gang composition
+*** Each gang may be different eg. Palanite and Corpse Grinder
+*** Gang comp can contain branching eg. Palanite Patrol or Subjugator
+*** 1 Leader is always required
+*** 0-n Champions is common
+*** Ratio of Juves or Gangers to the Gang is common
+**** eg. Corpse Grinder Initiate number must equal or eclipse Skinners in the gang.
